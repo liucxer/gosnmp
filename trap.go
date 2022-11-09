@@ -60,6 +60,7 @@ func (x *GoSNMP) SendTrap(trap SnmpTrap) (result *SnmpPacket, err error) {
 		}
 
 		// If it's an inform, do that instead.
+		/*
 		if trap.IsInform {
 			pdutype = InformRequest
 		}
@@ -70,6 +71,7 @@ func (x *GoSNMP) SendTrap(trap SnmpTrap) (result *SnmpPacket, err error) {
 			// prepend timetickPDU
 			trap.Variables = append([]SnmpPDU{timetickPDU}, trap.Variables...)
 		}
+		*/
 
 	case Version1:
 		pdutype = Trap
